@@ -1,0 +1,246 @@
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .techhdr div ul li {
+    margin-right: 50px;
+  }
+
+  .techftr div input {
+    width: 276px !important;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .techhdr div ul li {
+    margin-right: 30px;
+  }
+
+  .techhdr h1 {
+    font-size: 24px;
+    margin-top: 2px;
+  }
+
+  .techftr div input {
+    width: 215px !important;
+  }
+  #advantage-1{
+    display: grid !important;
+    grid-template-columns: repeat(2,2fr);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .techhdr {
+    grid-template-columns: repeat(1, 2fr) !important;
+  }
+
+  .techhdr h1 {
+    text-align: center;
+  }
+
+  .techhdr div ul {
+    display: flex !important;
+    justify-content: space-around;
+    margin: 0 !important;
+  }
+
+  .techftr {
+    grid-template-columns: repeat(1, 2fr) !important;
+  }
+
+  .techftr-2 div h4 {
+    margin: 0 !important;
+  }
+
+  .techftr div {
+    text-align: center !important;
+  }
+
+  .techftr-2 {
+    grid-template-columns: repeat(1, 3fr) !important;
+    margin: 0 !important;
+  }
+
+  .techftr-2 div ul {
+    padding: 0 !important;
+  }
+
+  .techftr-2 div {
+    margin-top: 10px !important;
+  }
+
+  .techftr div input {
+    width: 220px !important;
+  }
+
+  .techftr div h4:first-child {
+    margin-top: 10px !important;
+  }
+  .slider-content{
+    grid-template-columns: repeat(1,2fr) !important;
+  }
+  .slider-content div{
+   margin: 0 !important;
+  }
+  #advantage-1{
+    display: grid !important;
+    grid-template-columns: repeat(1,4fr);
+    margin-left: 100px;
+  }
+}
+
+.techhdr {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  color: white;
+  background-color: black;
+}
+
+.techhdr div ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 5px 0 0 450px;
+  list-style: none;
+}
+
+.techhdr div ul li {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.container {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.techftr {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.techftr-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 50px;
+}
+
+.techftr div input {
+  border: 1px solid white;
+  background-color: black;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 374px;
+}
+
+.techftr div button {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+}
+
+.techftr-2 div ul {
+  list-style: none;
+}
+
+.techftr-2 div ul li {
+  padding: 5px;
+}
+
+.techftr-2 div h4 {
+  margin-left: 29px;
+}
+
+.slider-container {
+  max-width: 100%;
+  padding: 50px;
+  background-color: black;
+  color: white;
+}
+
+.slider-content{
+  display: grid !important;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.slider-content img{
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+ 
+}
+.slider-content div{
+  margin-top: 100px;
+  margin-left: 155px;
+}
+.slider-content div p:first-child{
+font-size: 23px;
+}
+
+.slider-content div h3{
+  font-size: 35px;
+}
+
+.slider-content div p:nth-child(3){
+  font-size: 20px;
+  }
+
+.slider-content div button{
+  border: none;
+  background-color: red;
+  padding: 10px;
+  font-size: 18px;
+  width: 120px;
+  height: 46px;
+  color: white;
+}
+
+.slider-content div p span{
+  text-decoration: line-through;
+  }
+
+.advantages-1{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin-left: 20px;
+}
+
+.advantages-1 div{
+ display: flex;
+ margin-left: 20px;
+ margin-bottom: 50px;
+}
+
+.advantages-1 div span{
+  font-size: 35px;
+  color: red;
+  margin-right: 20px;
+}
+
+.advantages-1 div p{
+  margin: 0;
+}
+
+.advantages h2
+{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.advantages{
+  background-color: black;
+  color: white;
+}
+.slick-dots li button:before{
+  color: white !important;
+}
+
+
+
+
