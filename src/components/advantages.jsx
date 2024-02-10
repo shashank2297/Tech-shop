@@ -6,28 +6,28 @@ function Advantages(){
             <h2>Our Advantages</h2>
             <div className="advantages-1" id="advantage-1">
                 <div>
-                    <span><i class="bi bi-truck"></i></span>
+                    <span><i className="bi bi-truck"></i></span>
                     <section>
                         <p>Express Delivery</p>
                         <p>Ships in 24 Hours</p>
                     </section>
                 </div>
                 <div>
-                <span><i class="bi bi-shield"></i></span>
+                <span><i className="bi bi-shield"></i></span>
                     <section>
                         <p>Brand Warranty</p>
                         <p>100% Original Products</p>
                     </section>
                 </div>
                 <div>
-                <span><i class="bi bi-cash-stack"></i></span>
+                <span><i className="bi bi-cash-stack"></i></span>
                     <section>
                         <p>Exciting Deals</p>
                         <p>On all prepaid offers</p>
                     </section>
                 </div>
                 <div>
-                <span><i class="bi bi-credit-card-fill"></i></span>
+                <span><i className="bi bi-credit-card-fill"></i></span>
                     <section>
                         <p>Secure Payments</p>
                         <p>SSL/Secure Certificate</p>

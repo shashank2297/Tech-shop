@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "../css/App.css"; 
-import SonyXb910N from "../Assets/images/products/sonyXb910n-1.png"
+import SonyXb910N from '../assets/images/products/sonyXb910n-1.png'
 
 function SimpleSlider() {
   const settings = {

@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
   .techhdr div ul li {
-    margin-right: 50px;
+    margin-right: 60px;
   }
 
   .techftr div input {
@@ -21,9 +21,10 @@
   .techftr div input {
     width: 215px !important;
   }
-  #advantage-1{
+
+  #advantage-1 {
     display: grid !important;
-    grid-template-columns: repeat(2,2fr);
+    grid-template-columns: repeat(2, 2fr);
   }
 }
 
@@ -74,15 +75,18 @@
   .techftr div h4:first-child {
     margin-top: 10px !important;
   }
-  .slider-content{
-    grid-template-columns: repeat(1,2fr) !important;
+
+  .slider-content {
+    grid-template-columns: repeat(1, 2fr) !important;
   }
-  .slider-content div{
-   margin: 0 !important;
+
+  .slider-content div {
+    margin: 0 !important;
   }
-  #advantage-1{
+
+  #advantage-1 {
     display: grid !important;
-    grid-template-columns: repeat(1,4fr);
+    grid-template-columns: repeat(1, 4fr);
     margin-left: 100px;
   }
 }
@@ -158,39 +162,41 @@
 
 .slider-container {
   max-width: 100%;
-  padding: 50px;
+  padding: 30px;
   background-color: black;
   color: white;
 }
 
-.slider-content{
+.slider-content {
   display: grid !important;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.slider-content img{
+.slider-content img {
   max-width: 100%;
   width: 400px;
   height: auto;
- 
+
 }
-.slider-content div{
+
+.slider-content div {
   margin-top: 100px;
   margin-left: 155px;
 }
-.slider-content div p:first-child{
-font-size: 23px;
+
+.slider-content div p:first-child {
+  font-size: 23px;
 }
 
-.slider-content div h3{
+.slider-content div h3 {
   font-size: 35px;
 }
 
-.slider-content div p:nth-child(3){
+.slider-content div p:nth-child(3) {
   font-size: 20px;
-  }
+}
 
-.slider-content div button{
+.slider-content div button {
   border: none;
   background-color: red;
   padding: 10px;
@@ -200,47 +206,138 @@ font-size: 23px;
   color: white;
 }
 
-.slider-content div p span{
+.slider-content div p span {
   text-decoration: line-through;
-  }
+}
 
-.advantages-1{
+.advantages-1 {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-left: 20px;
 }
 
-.advantages-1 div{
- display: flex;
- margin-left: 20px;
- margin-bottom: 50px;
+.advantages-1 div {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 50px;
 }
 
-.advantages-1 div span{
+.advantages-1 div span {
   font-size: 35px;
   color: red;
   margin-right: 20px;
 }
 
-.advantages-1 div p{
+.advantages-1 div p {
   margin: 0;
 }
 
-.advantages h2
-{
+.advantages h2 {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.advantages{
+.advantages {
   background-color: black;
   color: white;
 }
-.slick-dots li button:before{
+
+.slick-dots li button:before {
   color: white !important;
 }
+.topproducts{
+  background-color: black;
+  color: white;
+}
 
+.topproducts-1{
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.topproducts-2{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
 
+.topproducts-2 div{
+  border: 1px solid silver;
+  margin: 10px;
+}
+.topproducts-2 div section{
+  padding: 15px;
+}
+
+.topproducts-2 div section p:first-child{
+  color: red;
+}
+
+.topproducts-2 div section button{
+  background-color: red;
+  border: none;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  color: white;
+}
+.topproducts-2 div section p span{
+  text-decoration: line-through;
+}
+
+.topproducts-2 div .image-container {
+  background-color: rgb(22, 1, 1);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.topproducts-2 div .image-container img {
+  max-width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.topproducts h2{
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+
+.topproducts-1{
+  padding-bottom: 50px;
+}
+
+.topproducts-1 button{
+  border: none;
+  color: white;
+  padding: 8px;
+  background-color: black;
+}
+
+.topproducts-1 button:hover{
+ background-color: red;
+}
+
+.topproducts-2 .browse{
+ max-height: 543px;
+}
+
+.topproducts-2 .browse button{
+  border: none;
+  background-color: black;
+  color: silver;
+  font-size: 44px;
+  padding: 25px;
+  text-align: left;
+  margin-top: 184px;
+}
+
+/* .over-ear {
+  position: absolute;
+  font-size: 1rem;
+  color: lightslategray;
+  z-index: -1;
+  top: -85px;
+  filter: brightness(20%);
+} */
 
