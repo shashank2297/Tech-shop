@@ -1,4 +1,4 @@
-import "../css/App.css"
+import "../css/external-css.css"
 
 function Advantages(){
     return(
