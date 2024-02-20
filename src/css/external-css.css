@@ -16,6 +16,18 @@
     grid-template-columns: repeat(4, 1fr) !important;
   }
 
+  .search span {
+    right: 372px !important;
+  }
+
+  .cross {
+    right: 503px !important;
+  }
+
+  .delete {
+    left: 25px !important;
+  }
+
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
@@ -59,21 +71,41 @@
   .products-1 {
     padding: 0 15px 0 15px !important;
   }
-  .productsinfo{
-    grid-template-columns: repeat(2,1fr) !important;
+
+  .productsinfo {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  .productsinfo-1 img{
+  .productsinfo-1 img {
     width: 30%;
 
+
   }
-  .productsinfo-1{
+
+  .productsinfo-1 {
     padding: 10px !important;
   }
-  .productsinfo-3{
+
+  .productsinfo-3 {
     display: grid !important;
     place-items: center;
     width: 200%;
+  }
+
+  .search span {
+    right: 208px !important;
+  }
+
+  .cross {
+    right: 272px !important;
+  }
+
+  .specs {
+    width: 45% !important;
+  }
+
+  .delete {
+    left: 335px !important;
   }
 }
 
@@ -171,7 +203,6 @@
   .products-1 div ul {
     margin: 0 !important;
     padding: 0 !important;
-
   }
 
   .products-1 div {
@@ -185,21 +216,57 @@
   .products-1 div {
     margin-top: 15px;
   }
-  .productsinfo{
-    grid-template-columns: repeat(2,1fr) !important;
+
+  .productsinfo {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 
-  .productsinfo-1 img{
+  .productsinfo-1 img {
     width: 30%;
   }
-  .productsinfo-1{
+
+  .productsinfo-1 {
     padding: 10px !important;
   }
-  .productsinfo-3{
+
+  .productsinfo-3 {
     display: grid !important;
     place-items: center;
     width: 180%;
     margin-left: 10px !important;
+  }
+
+  .search span {
+    right: 120px !important;
+  }
+
+  .cross {
+    right: 48px !important;
+  }
+
+  .loginpage {
+    width: 80% !important;
+  }
+
+  .topproducts-1 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 2fr);
+  }
+
+  .specs {
+    width: 85% !important;
+  }
+
+  .productsinfo section div {
+    grid-template-columns: repeat(1, 2fr) !important;
+  }
+
+  .cart {
+    grid-template-columns: repeat(1, 2fr) !important;
+  }
+
+  .delete {
+    left: 368px !important;
   }
 }
 
@@ -216,6 +283,7 @@
   grid-template-columns: repeat(3, 1fr);
   margin: 5px 0 0 450px;
   list-style: none;
+  position: relative;
 }
 
 .techhdr div ul li {
@@ -224,14 +292,27 @@
   cursor: pointer;
 }
 
-.search{
+.techhdr div ul li sub {
+  position: absolute;
+  top: -4px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 27px;
+  height: 23px;
+  font-size: 16px;
+  background-color: red;
+}
+
+.search {
   background-color: black;
   color: white;
   text-align: center;
   position: relative;
 }
 
-.search input{
+.search input {
   width: 50%;
   background-color: black;
   color: white;
@@ -240,7 +321,7 @@
   outline: none;
 }
 
-.search span{
+.search span {
   position: absolute;
   right: 350px;
   font-size: 18px;
@@ -248,25 +329,25 @@
   cursor: pointer;
 }
 
-.loginpage{
+.loginpage {
   width: 30%;
   background-color: silver;
   color: black;
   padding: 30px;
 }
 
-.loginpage input{
+.loginpage input {
   padding: 10px;
   margin: 10px;
   width: 100%;
 }
 
-.loginpage div button{
+.loginpage div button {
   width: 100%;
   padding: 10px;
 }
 
-.loginpage button{
+.loginpage button {
   width: 100%;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -275,15 +356,15 @@
   color: white;
 }
 
-.loginpage div button:first-child{
+.loginpage div button:first-child {
   background-color: rgb(37, 187, 237);
 }
 
-.loginpage div button:nth-child(2){
+.loginpage div button:nth-child(2) {
   background-color: rgb(234, 16, 16);
 }
 
-.loginpage div button:nth-child(3){
+.loginpage div button:nth-child(3) {
   background-color: rgb(28, 97, 235);
 }
 
@@ -293,13 +374,21 @@
   margin-left: 5px;
 }
 
-.center{
+.loginpage p span {
+  cursor: pointer;
+}
+
+.loginpage p span:hover {
+  color: red;
+}
+
+.center {
   background-color: black;
   color: white;
   position: relative;
 }
 
-.cross{
+.cross {
   background-color: silver;
   color: blue;
   font-size: 20px;
@@ -673,9 +762,10 @@
 
 .products-1 div ul {
   list-style: none;
+  padding: 0;
 }
 
-.productsinfo{
+.productsinfo {
   color: white;
   background-color: black;
   display: grid;
@@ -683,48 +773,49 @@
   padding-top: 40px;
 }
 
- .productsinfo-1 img{
+.productsinfo-1 img {
   max-width: 100%;
   margin: 10px;
   border: 1px solid silver;
+  cursor: pointer;
 }
 
- .productsinfo-1{
+.productsinfo-1 {
   padding: 0 130px 30px 20px;
 }
 
-.productsinfo section img{
+.productsinfo section img {
   max-width: 100%;
 }
 
-.productsinfo section h6{
+.productsinfo section h6 {
   font-size: 24px;
 }
 
-.productsinfo section div{
+.productsinfo section div {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .productsinfo-3 {
- margin: 5px 50px 5px 5px;
+  margin: 5px 50px 5px 5px;
 }
 
-.productsinfo-3 div section button{
- background-color: green;
- border: none;
- color: white;
- font-size: 18px;
- padding: 5px;
+.productsinfo-3 div section button {
+  background-color: green;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
 }
 
-.border{
+.border {
   border: 1px solid silver;
   padding: 5px;
   margin-right: 20px;
 }
 
-#cart{
+#cart {
   background-color: red;
   border: none;
   padding: 5px;
@@ -733,26 +824,178 @@
   color: white;
 }
 
-.productsinfo section p{
+.productsinfo section p {
   font-size: 16px;
 }
 
-.details{
+.details {
   display: flex;
   justify-content: space-evenly;
 }
 
-.prddetails{
+.prddetails {
   background-color: black;
   color: white;
 }
 
-.details p{
+.details p {
   cursor: pointer;
   padding: 5px;
 }
 
-.details p:hover{
+.details p:hover {
   background-color: red;
 }
 
+.cart {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: black;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.cart-1 {
+  display: grid;
+  grid-template-columns: 45% 45% 10%;
+  padding: 20px;
+  border: 1px solid silver;
+}
+
+.cart-1 img {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  border: 1px solid silver;
+  position: absolute;
+}
+
+.counter button {
+  border: 1px solid silver;
+  padding: 0 5px 0 5px;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  filter: brightness(60%);
+}
+
+.value {
+  padding: 0 5px 0 5px;
+  font-size: 18px;
+  margin: 0 10px;
+  color: red;
+}
+
+.delete {
+  position: absolute;
+  left: 555px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.cart-2 {
+  padding: 30px;
+}
+
+.checkout {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  width: 50%;
+
+}
+
+.clear {
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 50%;
+}
+
+.clear:hover {
+  background-color: red;
+}
+
+#active:active {
+  color: red !important;
+}
+
+#active {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  accent-color: red;
+}
+
+.search-results {
+  background-color: black;
+  color: white;
+  width: 50%;
+}
+
+.search-results ul {
+  background-color: black;
+  color: white;
+  text-align: left !important;
+  padding: 0;
+  margin: 0;
+}
+
+center {
+  background-color: black;
+  color: white;
+}
+
+.search-results ul li:hover {
+  background-color: red !important;
+}
+
+.specs {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.reviews {
+  padding: 10px;
+}
+
+.reviews section {
+  display: flex;
+}
+
+.reviews section p i {
+  font-size: 35px;
+}
+
+.reviews section p {
+  margin: 0;
+}
+
+.reviews section div {
+  padding: 5px;
+}
+
+.bi-star-fill {
+  font-size: 14px !important;
+  color: red;
+}
+
+.cart-2-sum {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 100px 0 0;
+}
