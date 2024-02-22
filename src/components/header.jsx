@@ -58,7 +58,7 @@ function Header() {
     }
 
     return (
-        <>
+        <div className="hdr">
             <div className='techhdr'>
                 <Link to="/" style={{ textDecoration: "none", color: "white" }}><h1>Tech Shop</h1></Link>
                 <div>
@@ -149,7 +149,7 @@ function Header() {
                     </center>
                 )
             }
-        </>
+        </div>
     )
 }
 

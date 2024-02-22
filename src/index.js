@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Provider } from 'react-redux';
 import store from './store';
-store.subscribe(() => console.log(store.getState()));
+store.subscribe(() => store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

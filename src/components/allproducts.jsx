@@ -2,8 +2,24 @@ import { Link } from "react-router-dom";
 import productsData from "../Assets/productsData";
 import "../css/external-css.css";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addtocart } from "../actions";
+import Header from "./header";
 
 function Allproducts() {
+
+    let dispatch =useDispatch()
+
+    function addtocartitem(product){
+        dispatch(addtocart(product))
+        const buttonId = `cart-style-${product.id}`;
+        const button = document.getElementById(buttonId);
+        if (button) {
+            button.style.backgroundColor ="green";
+            button.innerHTML = "Added";
+        }
+    }
+    
 
     const [products, setProducts] = useState(productsData);
     const [selectedBrands, setSelectedBrands] = useState([]);
@@ -97,6 +113,8 @@ function Allproducts() {
     }
 
     return (
+        <>
+        <Header />
         <div className="products">
             <section className="products-1">
                 <div>
@@ -166,13 +184,15 @@ function Allproducts() {
                             <p>{product.info}</p>
                             <hr />
                             <p>${product.finalPrice} <span>${product.originalPrice}</span></p>
-                            <button>Add to Cart</button>
+                            <button onClick={()=> addtocartitem(product)} id= {`cart-style-${product.id}`} >Add to Cart</button>
                         </section>
                     </div>
                 ))}
             </section>
         </div>
+        </>
     )
+    
 }
 
 export default Allproducts;

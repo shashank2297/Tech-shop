@@ -48,6 +48,12 @@ function Topproducts() {
 
     function addproducttocart(product) {
        dispatch(addtocart(product))
+       const buttonId = `cart-style-${product.id}`;
+       const button = document.getElementById(buttonId);
+       if (button) {
+           button.style.backgroundColor ="green";
+           button.innerHTML = "Added";
+       }
     }
 
     return (
@@ -72,7 +78,7 @@ function Topproducts() {
                             <p>{product.info}</p>
                             <hr />
                             <p>${product.finalPrice} <span>${product.originalPrice}</span></p>
-                            <button onClick={() => addproducttocart(product)} >Add to Cart</button>
+                            <button onClick={() => addproducttocart(product)} id= {`cart-style-${product.id}`} >Add to Cart</button>
                         </section>
                     </div>
                 ))

@@ -270,12 +270,20 @@
   }
 }
 
+.hdr {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
 .techhdr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 10px;
   color: white;
   background-color: black;
+  position: sticky;
+  top: 0;
 }
 
 .techhdr div ul {
@@ -301,7 +309,7 @@
   border-radius: 50%;
   width: 27px;
   height: 23px;
-  font-size: 16px;
+  font-size: 15px;
   background-color: red;
 }
 
@@ -815,7 +823,7 @@
   margin-right: 20px;
 }
 
-#cart {
+.cart-button {
   background-color: red;
   border: none;
   padding: 5px;
@@ -902,6 +910,8 @@
 
 .cart-2 {
   padding: 30px;
+  background-color: black;
+  color: white;
 }
 
 .checkout {
@@ -998,4 +1008,13 @@ center {
   display: flex;
   justify-content: space-between;
   margin: 0 100px 0 0;
+}
+
+.cartempty {
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  height: 300px;
+  line-height: 200px;
 }

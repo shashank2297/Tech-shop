@@ -4,10 +4,25 @@ import '../css/external-css.css';
 import Productdetails from "./productdetails"
 import Advantages from "./advantages"
 import Footer from "./footer"
+import Header from "./header";
+import { useDispatch } from "react-redux";
+import { addtocart } from "../actions";
 
 function Productsinfo() {
 
+    let dispatch = useDispatch()
+
     const { productId } = useParams();
+
+    function addtocartitem(product){
+        dispatch(addtocart(product))
+        const buttonId = `cart-style-${product.id}`;
+        const button = document.getElementById(buttonId);
+        if (button) {
+            button.style.backgroundColor ="green";
+            button.innerHTML = "Added";
+        }
+    }
 
     const product = productsdata.find(product => product.id === parseInt(productId));
 
@@ -32,6 +47,7 @@ function Productsinfo() {
 
     return (
         <>
+        <Header/>
             <div className="productsinfo" key={product.id}>
                 <section className="productsinfo-1">
                     <img onClick={() => renderimages(0)} src={require(`${product.images[0]}`)} alt="" />
@@ -64,7 +80,7 @@ function Productsinfo() {
                         <p className="border">Pay Later and Avail Cashback</p>
                     </div>
                     <hr />
-                    <button id="cart">Add to Cart</button>
+                    <button className="cart-button" onClick={()=>addtocartitem(product)} id={`cart-style-${product.id}`} >Add to Cart</button>
                 </section>
             </div>
             <Productdetails></Productdetails>
