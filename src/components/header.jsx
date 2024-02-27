@@ -101,7 +101,7 @@ function Header() {
                         <button className="cross" onClick={togglecross}>x</button>
                         <div className="loginpage">
                             <h2>Login</h2>
-                            <p>New to tech shop? <span onClick={togglesignup}>Create an Account?</span></p>
+                            <p>New to tech shop? <span style= {{textDecoration: "underline"}} onClick={togglesignup}>Create an Account</span></p>
                             <input type="email" placeholder="email" />
                             <br />
                             <input type="password" placeholder="password" />
@@ -126,7 +126,7 @@ function Header() {
                         <button className="cross" onClick={togglecross}>x</button>
                         <div className="loginpage">
                             <h2>Sign Up</h2>
-                            <p>Already have an Account? <span onClick={togglelogin}>Login</span></p>
+                            <p>Already have an Account? <span style= {{textDecoration: "underline"}} onClick={togglelogin}>Login</span></p>
                             <input type="text" placeholder="Username" />
                             <br />
                             <input type="email" placeholder="Email" />

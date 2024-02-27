@@ -18,3 +18,8 @@ export const decreaseQuantity = (product) => ({
     type: 'DECREASE_QUANTITY',
     payload: product
 });
+
+export const setCart = (cart) => ({
+    type: "SET_CART",
+    payload: cart,
+  });

@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from "react-slick";
 import productsData from '../Assets/productsData';
 import "../css/external-css.css"
+import { Link } from 'react-router-dom';
 
 // Define custom arrow components
 const PrevArrow = (props) => {
@@ -50,9 +51,9 @@ const FeaturedProducts = () => {
                     {
                         featuredProduct.map(item => (
                             <div className="product-card" key={item.id}>
-                                <h3 className="product-name">{item.title}</h3>
+                                <Link to= {`/products/${item.id}`} style={{textDecoration: "none", color: "white"}}><h3 className="product-name">{item.title}</h3>
                                 <img className="product-image" src={require(`${item.images[0]}`)} alt="" />
-                                <p className="product-price">${item.finalPrice} <del>${item.originalPrice}</del></p>
+                                <p className="product-price">${item.finalPrice} <del>${item.originalPrice}</del></p></Link>
                             </div>
                         ))
                     }

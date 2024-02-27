@@ -83,9 +83,9 @@ function Productsinfo() {
                     <button className="cart-button" onClick={()=>addtocartitem(product)} id={`cart-style-${product.id}`} >Add to Cart</button>
                 </section>
             </div>
-            <Productdetails></Productdetails>
-            <Advantages></Advantages>
-            <Footer></Footer>
+            <Productdetails />
+            <Advantages />
+            <Footer />
         </>
     );
 }

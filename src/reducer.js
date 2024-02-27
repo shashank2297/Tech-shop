@@ -61,6 +61,13 @@ const reducer = (state = initialstate, action) => {
                 cartcount: state.cartcount - 1 // Decrement cart count
             };
 
+            case "SET_CART":
+                return {
+                    ...state,
+                    cart: action.payload,
+                    cartcount: action.payload.reduce((total, item) => total + item.quantity, 0) // Recalculate cart count
+                };
+
         default:
             return state;
     }

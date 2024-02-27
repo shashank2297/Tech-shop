@@ -4,10 +4,21 @@ import "../css/external-css.css"
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addtocart } from '../actions.js';
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 function Topproducts() {
 
     let dispatch = useDispatch();
+
+    let cart = useSelector(state => state.cart)
+
+    useEffect(() => {
+        const storedCart = localStorage.getItem("cart");
+        if (storedCart) {
+            dispatch({ type: "SET_CART", payload: JSON.parse(storedCart) });
+        }
+    }, [dispatch]);
 
     let limitedprods = productsData.slice(0, 10)
 
@@ -45,6 +56,9 @@ function Topproducts() {
         return stars;
     }
 
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     function addproducttocart(product) {
        dispatch(addtocart(product))

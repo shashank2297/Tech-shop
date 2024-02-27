@@ -1,9 +1,8 @@
 import React from "react";
 import Slider from "react-slick";
-import sonyXb910n from "./images/products/sonyXb910n-1.png"
-import jbl660nc from "./images/products/jbl660nc-1.png"
-import boat131 from "./images/products/boat131-1.png"
 import "../css/external-css.css"
+import productsData from "../Assets/productsData";
+import { Link } from "react-router-dom";
 
 function SimpleSlider() {
   const settings = {
@@ -17,6 +16,10 @@ function SimpleSlider() {
     autoplaySpeed: 2000,
   };
 
+  let sonyprod = productsData.find(product => product.id === 7);
+  let boatprod = productsData.find(product => product.id === 3)
+  let jblprod = productsData.find(product => product.id === 1)
+
   return (
     <div className="slider-container">
       <Slider {...settings}>
@@ -24,36 +27,36 @@ function SimpleSlider() {
           <p className="over-ear">Over Ear</p>
           <section>
             <div>
-              <p>Sony XB910N</p>
+              <p>{sonyprod.title}</p>
               <h3>Give your favourite music a Boost</h3>
-              <p>$13,489 <span>$19,990</span></p>
-              <button>Shop Now</button>
+              <p>${sonyprod.finalPrice} <span>${sonyprod.originalPrice}</span></p>
+              <Link to={`/products/${sonyprod.id}`}><button>Shop Now</button></Link>
             </div>
-            <img src={sonyXb910n} alt="" />
+            <img src={require(`${sonyprod.heroImage}`)} alt="" />
           </section>
         </div>
         <div>
           <p className="over-ear">Over Ear</p>
           <section>
             <div>
-              <p>JBL Live 660NC</p>
+              <p>{jblprod.title}</p>
               <h3>Keep the Noise Out, or In. You Choose</h3>
-              <p>$9,999 <span>$14,999</span></p>
-              <button>Shop Now</button>
+              <p>${jblprod.finalPrice} <span>${jblprod.originalPrice}</span></p>
+              <Link to={`/products/${jblprod.id}`}><button>Shop Now</button></Link>
             </div>
-            <img src={jbl660nc} alt="" />
+            <img src={require(`${jblprod.heroImage}`)} alt="" />
           </section>
         </div>
         <div>
           <p className="over-ear">In Ear</p>
           <section>
             <div>
-              <p>Boat Airdopes 131</p>
+              <p>{boatprod.title}</p>
               <h3>Feather Weight for Comfort All-Day.</h3>
-              <p>$1099 <span>$2990</span></p>
-              <button>Shop Now</button>
+              <p>${boatprod.finalPrice} <span>${boatprod.originalPrice}</span></p>
+              <Link to={`/products/${boatprod.id}`}><button>Shop Now</button></Link>
             </div>
-            <img src={boat131} alt="" />
+            <img src={require(`${boatprod.heroImage}`)} alt="" />
           </section>
         </div>
       </Slider>

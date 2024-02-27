@@ -4,11 +4,20 @@ import Header from "./header"
 import { useSelector } from "react-redux"
 import { deletecart } from "../actions"
 import { increaseQuantity, decreaseQuantity } from "../actions"
+import { useEffect } from "react"
 
 function Cart() {
 
-    let cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
+
+    let cart = useSelector(state => state.cart)
+
+    useEffect(() => {
+        const storedCart = localStorage.getItem("cart");
+        if (storedCart) {
+            dispatch({ type: "SET_CART", payload: JSON.parse(storedCart) });
+        }
+    }, [dispatch]);
 
     const RemoveFromCart = (product) => {
         dispatch(deletecart(product));
@@ -21,6 +30,10 @@ function Cart() {
     const decreaseItemCount = (product) => {
         dispatch(decreaseQuantity(product));
     };
+
+    useEffect(() => {
+        localStorage.setItem("cart", JSON.stringify(cart));
+    }, [cart]);
 
     const calculateItemfinalPrice = (product) => {
         return product.finalPrice * product.quantity;
